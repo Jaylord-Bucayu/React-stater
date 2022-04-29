@@ -10,7 +10,7 @@ module.exports = {
   mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./public/index.html",
     }),
   ],
   resolve: {
@@ -21,7 +21,7 @@ module.exports = {
     rules: [
         {
             test: /\.html$/,
-            exclude: [/node_modules/, require.resolve("./src/index.html")],
+            exclude: [/node_modules/, require.resolve("./public/index.html")],
             use:{
                 loader: "html-loader",
                
